@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Our Menu</h1>
+
+    {% if categories %}
+        {% for category in categories %}
+            <h2 class="pt-4 mb-4">{{ category.name }}</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+                {% for item in category.items.all %}
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    {% if not item.is_available %}<del>{{ item.name }}</del>{% else %}{{ item.name }}{% endif %}
+                                </h5>
+                                {% if item.description %}
+                                    <p class="card-text">{{ item.description }}</p>
+                                {% endif %}
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary fs-6">${{ item.price }}</span>
+                                    {% if item.is_available %}
+                                        <a href="{% url 'add_to_cart' item.id %}" class="btn btn-success btn-sm">Add to Cart</a>
+                                    {% else %}
+                                        <button class="btn btn-secondary btn-sm" disabled>Sold Out</button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <a href="{% url 'menu_item' item.id %}" class="btn btn-outline-primary btn-sm w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-muted">The menu is being updated &mdash; check back soon!</p>
+    {% endif %}
+</div>
+{% endblock %}

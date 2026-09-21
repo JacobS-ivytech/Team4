@@ -1,0 +1,102 @@
+:root {
+    --brand-primary: #c1440e;
+    --brand-primary-dark: #9c3609;
+    --brand-accent: #e8a33d;
+    --brand-success: #4c7031;
+    --brand-cream: #fff8ee;
+    --brand-dark: #3b2a20;
+
+    /* Bootstrap theme-color variables that its bg-*/text-*/border-* utilities
+       read via var(...) with !important, so overriding them here re-themes
+       those utilities without fighting !important ourselves. */
+    --bs-primary: var(--brand-primary);
+    --bs-primary-rgb: 193, 68, 14;
+    --bs-success: var(--brand-success);
+    --bs-success-rgb: 76, 112, 49;
+}
+
+body {
+    background-color: var(--brand-cream);
+    color: var(--brand-dark);
+}
+
+a {
+    color: var(--brand-primary);
+}
+a:hover {
+    color: var(--brand-primary-dark);
+}
+
+.navbar {
+    background-color: #fff !important;
+    border-bottom: 3px solid var(--brand-primary);
+}
+.navbar-brand {
+    color: var(--brand-primary) !important;
+    font-weight: 700;
+}
+.nav-link {
+    color: var(--brand-dark) !important;
+}
+.nav-link:hover {
+    color: var(--brand-primary) !important;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.badge.bg-primary {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+.btn-primary:hover {
+    background-color: var(--brand-primary-dark);
+    border-color: var(--brand-primary-dark);
+}
+.btn-outline-primary {
+    color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+.btn-outline-primary:hover {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: #fff;
+}
+
+.btn-success {
+    background-color: var(--brand-success);
+    border-color: var(--brand-success);
+}
+.btn-success:hover {
+    background-color: #3c5820;
+    border-color: #3c5820;
+}
+.text-success {
+    color: var(--brand-success) !important;
+}
+
+.hero-band {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+    color: #fff;
+    border-radius: 0.75rem;
+    padding: 3.5rem 1.5rem;
+}
+.hero-band .lead {
+    color: #fff;
+}
+.hero-band .btn-primary {
+    background-color: #fff;
+    border-color: #fff;
+    color: var(--brand-primary);
+    font-weight: 600;
+}
+.hero-band .btn-primary:hover {
+    background-color: var(--brand-cream);
+    border-color: var(--brand-cream);
+}
+
+.card {
+    border-color: rgba(59, 42, 32, 0.12);
+}
+.card:hover {
+    box-shadow: 0 0.35rem 0.9rem rgba(59, 42, 32, 0.1);
+}

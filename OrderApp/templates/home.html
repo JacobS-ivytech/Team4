@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <div class="hero-band text-center mb-5">
+        <h1>Jesus Latin Grill</h1>
+        <p class="lead">Bold Latin flavors, fast-casual style. Tacos, burritos &amp; bowls made fresh daily.</p>
+        <a href="{% url 'menu' %}" class="btn btn-primary btn-lg">View the Menu</a>
+    </div>
+
+    <div class="row text-center g-4 mb-5">
+        <div class="col-md-4">
+            <h4>Fresh Ingredients</h4>
+            <p class="text-muted">Guacamole made fresh daily, hand-pressed tortillas, and slow-roasted meats.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Fast Casual</h4>
+            <p class="text-muted">Order online, skip the line, and pick up bold flavors in minutes.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Latin-Inspired</h4>
+            <p class="text-muted">Peruvian, Mexican, and Yucatan-style dishes you won't find anywhere else.</p>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2>Visit Us</h2>
+            <p class="mb-1">123 Flavor Ave, Your City</p>
+            <p class="mb-1">(555) 123-4567</p>
+            <p class="mb-1">Mon&ndash;Sat: 11am &ndash; 9pm &middot; Sun: 12pm &ndash; 6pm</p>
+        </div>
+        <div class="col-md-6 text-center mt-4 mt-md-0">
+            <a href="{% url 'menu' %}" class="btn btn-outline-primary btn-lg">Browse Full Menu</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
