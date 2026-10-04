@@ -100,3 +100,65 @@ a:hover {
 .card:hover {
     box-shadow: 0 0.35rem 0.9rem rgba(59, 42, 32, 0.1);
 }
+
+
+.checkout-page h1 {
+    color: var(--brand-dark);
+    font-weight: 700;
+}
+
+.checkout-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.75rem rgba(59, 42, 32, 0.08);
+}
+
+.checkout-card .card-header {
+    background-color: #fff;
+    border-bottom: 2px solid var(--brand-primary);
+    color: var(--brand-dark);
+    padding: 1rem 1.25rem;
+}
+
+.checkout-card .card-header h5 {
+    font-weight: 700;
+}
+
+.checkout-card .card-body {
+    padding: 1.5rem;
+}
+
+.checkout-card .form-control,
+.checkout-card .form-select {
+    border-radius: 8px;
+    padding: 0.7rem 0.8rem;
+}
+
+.checkout-card .form-control:focus,
+.checkout-card .form-select:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 0.2rem rgba(193, 68, 14, 0.15);
+}
+
+.checkout-item {
+    padding: 0.75rem 0;
+}
+
+.checkout-total {
+    font-size: 1.15rem;
+    color: var(--brand-dark);
+}
+
+.checkout-place-order {
+    background-color: var(--brand-success);
+    border-color: var(--brand-success);
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.checkout-place-order:hover {
+    background-color: #3c5820;
+    border-color: #3c5820;
+}
