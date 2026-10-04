@@ -65,7 +65,9 @@
                             <strong>${{ cart.get_total|multiply:1.07|floatformat:2 }}</strong>
                         </div>
                         <div class="d-grid gap-2">
-                            <button class="btn btn-success" disabled>Checkout (Coming Soon)</button>
+                            <a href="{% url 'checkout' %}" class="btn btn-success">
+    				Checkout
+				</a>
                             <a href="{% url 'clear_cart' %}" class="btn btn-outline-danger" onclick="return confirm('Clear all items from cart?')">
                                 Clear Cart
                             </a>
