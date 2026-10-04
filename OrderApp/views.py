@@ -80,3 +80,8 @@ def clear_cart(request):
     cart = Cart.get_for_user(request.user)
     cart.cartitem_set.all().delete()
     return redirect("cart")
+
+@login_required
+def checkout(request):
+    cart = Cart.get_for_user(request.user)
+    return render(request, "checkout.html", {"cart": cart})
