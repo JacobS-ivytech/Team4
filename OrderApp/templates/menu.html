@@ -10,6 +10,15 @@
                 {% for item in category.items.all %}
                     <div class="col">
                         <div class="card h-100">
+                                      {% if item.image %}
+                                <img
+                                    src="{{ item.image.url }}"
+                                    class="card-img-top"
+                                    alt="{{ item.name }}"
+                                    style="height: 220px; object-fit: cover;"
+                                >
+                            {% endif %}
+
                             <div class="card-body">
                                 <h5 class="card-title">
                                     {% if not item.is_available %}<del>{{ item.name }}</del>{% else %}{{ item.name }}{% endif %}
