@@ -1,11 +1,7 @@
-This is an application to facilitate online ordering for the restaurant Jesus Latin Grill.
+The purpose of this project is to develop a mobile ordering website for the restaurant Jesus Latin Grill. The website will provide customers with a convenient way to view the restaurant’s menu and place food orders for pickup or delivery. The system must allow customers to browse available menu items, select items for an order, review selections, and submit orders to the restaurant. The website will also provide a way for restaurant staff to receive and manage incoming orders on their end.
 
-This is built on Django 6.1.1 using Python.
+This mobile ordering website is a django framework using python 3.13.1. It is currently being hosted through pythonanywhere.com at the url https://jacobs.pythonanywhere.com/ that is linked to a repository on github.com. This is the default domain name and can be changed on the dashboard providing the developer plan subscription option is active for the account hosting the site.
 
-I have used the django documentation found here https://docs.djangoproject.com/en/6.1/intro/tutorial01/ to start this build.
+To implement updates to the site, you must pull the newest commit from the github repository. This can be done by opening the bash console on the dashboard of the pythonanywhere account. This can be done clicking the button "$ Bash" under the consoles column on the left of the screen.
 
-The JesusLatinGrill directory is the project folder (mysite) and the OrderApp directory is where the app will be built.
-
-I have created some of the setup for the paths for url in the most basic sense. If you run python manage.py runserver then you will see the plain text homepage.
-
-If anyone has anything they want to add or change please feel free. I will do my best to update things as well as quickly as I can.
+This will open a console that will allow you to enter commands to the server. From here we only have a few easy commands to enter to update to the most recent version of the site. First we need to change our working directory so we are in line with the repository. We can do this by typing “cd Team4” and pressing enter. Then we type in “git pull” and press enter. This will pull the most recent version of the site from github to the server on pythonanywhere.
